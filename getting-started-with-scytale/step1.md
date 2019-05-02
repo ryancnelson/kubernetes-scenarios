@@ -7,5 +7,14 @@ The command below will populate an index.html file with links to the rest of thi
 This command will run a webserver to serve up this file.
 `python -mSimpleHTTPServer 8001`{{execute HOST1}}
 
+This command *should* decrypt "kubeconfig.txt.encrypted":
+`openssl enc -d -a -in kubeconfig.txt.encrypted -aes-256-cbc -pass file:config-secret-key > kubeconfig`
+
+This command should set you up to use that kubeconfig for the rest of this demo:
+`export KUBECONFIG=/root/kubeconfig`
+
+Test that this is working:
+`kubectl get all --all-namespaces`
+
 
 Render port 8001: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/links.html
