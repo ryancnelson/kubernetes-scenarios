@@ -51,7 +51,7 @@
         "uilayout": "terminal-iframe",
         "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n",
         "showdashboard": true,
-        "dashboards": [{"name": "Display 8080", "port": 8080}]
+        "dashboards": [{"name": "Display 8001", "port": 8001}]
     },
     "backend": {
       "imageid": "kubernetes"

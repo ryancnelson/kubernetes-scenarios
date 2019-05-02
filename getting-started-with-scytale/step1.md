@@ -9,8 +9,8 @@ The command below will initialise the cluster with a known token to simplify the
 `curl https://gist.githubusercontent.com/ryancnelson/cbb9a76e65930875d202a9d88d16b51c/raw/143c6bb1092a7607146e928a678611211cfb113f/gistfile1.txt > index.html `{{execute HOST1}}
 
 
-`python -mSimpleHTTPServer 8080`{{execute HOST1}}
+`python -mSimpleHTTPServer 8001`{{execute HOST1}}
 
 In production, it's recommend to exclude the token causing kubeadm to generate one on your behalf.
 
-Render port 8080: https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+Render port 8001: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/
