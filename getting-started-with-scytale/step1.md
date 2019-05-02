@@ -19,7 +19,9 @@ Test that this is working:
 
 Render port 8001: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/links.html
 
+set focus to the top pane of GNU-screen:
 `:focus top`{{execute HOST1}}
+set focus to the bottom pane of GNU-screen:
 `:focus bottom`{{execute HOST1}}
 
 
