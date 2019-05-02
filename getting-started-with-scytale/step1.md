@@ -49,4 +49,4 @@ set GNU-screen to enable mouse-tracking:
 `:mousetrack on`{{execute HOST1}}
 
 start kubectl proxy:
-`:focus topexport KUBECONFIG=/root/kubeconfig ; kubectl proxy --address 0.0.0.0 --port=8001 --disable-filter=false`{{execute HOST1}}
+`:focus topexport KUBECONFIG=/root/kubeconfig ; kubectl proxy --address 0.0.0.0 --port=8001 --allow-hosts='.*'`{{execute HOST1}}
