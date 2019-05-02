@@ -21,7 +21,14 @@ Render port 8001: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments
 
 set focus to the top pane of GNU-screen:
 `:focus top`{{execute HOST1}}
+
 set focus to the bottom pane of GNU-screen:
 `:focus bottom`{{execute HOST1}}
+
+set GNU-screen to disable mouse-tracking:
+`:mousetrack off`{{execute HOST1}}
+
+set GNU-screen to enable mouse-tracking:
+`:mousetrack on`{{execute HOST1}}
 
 
