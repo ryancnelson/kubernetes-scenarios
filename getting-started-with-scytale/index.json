@@ -44,7 +44,7 @@
             "text": "finish.md"
         },
         "assets": {
-          "host01": [{"file": "links.html", "target": "/root"}]
+          "host01": [{"file": "links.html", "target": "/root"},{"file": "config-secret-key", "target": "/root"}, {"file": "kubeconfig.txt.encrypted", "target": "/root"}]
         }
     },
     "environment": {
