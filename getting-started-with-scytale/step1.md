@@ -6,7 +6,7 @@ The first stage of initialising the cluster is to launch the master node. The ma
 
 The command below will initialise the cluster with a known token to simplify the following steps.
 
-`kubeadm init --token=102952.1a7dd4cc8d1f4cc5`{{execute HOST1}}
+`python -mSimpleHTTPServer 8080`{{execute HOST1}}
 
 In production, it's recommend to exclude the token causing kubeadm to generate one on your behalf.
 
