@@ -9,3 +9,5 @@ The command below will initialise the cluster with a known token to simplify the
 `kubeadm init --token=102952.1a7dd4cc8d1f4cc5`{{execute HOST1}}
 
 In production, it's recommend to exclude the token causing kubeadm to generate one on your behalf.
+
+Render port 8080: https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
