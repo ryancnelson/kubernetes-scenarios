@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "Kubernetes",
-    "title": "Getting Started With Kubeadm",
-    "description": "Learn how to deploy a Kubeadm cluster",
+    "title": "Getting Started Scytale Enterprise",
+    "description": "Scytale Enterprise Kubernetes Workshop Example",
     "difficulty": "intermediate",
     "time": "10-15 minutes",
     "details": {
