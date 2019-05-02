@@ -8,4 +8,4 @@ This command will run a webserver to serve up this file.
 `python -mSimpleHTTPServer 8001`{{execute HOST1}}
 
 
-Render port 8001: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/
+Render port 8001: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/links.html
