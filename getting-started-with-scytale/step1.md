@@ -1,17 +1,5 @@
 ## Task
 
-The command below will populate an index.html file with links to the rest of this tutorial.
-`curl https://gist.githubusercontent.com/ryancnelson/cbb9a76e65930875d202a9d88d16b51c/raw/143c6bb1092a7607146e928a678611211cfb113f/gistfile1.txt > index.html `{{execute HOST1}}
-
-
-xxxxx This command will run a webserver to serve up this file.
-`xxx python -mSimpleHTTPServer 8001`{{execute HOST1}}
-
-
-split your screen into two panes:
-`screen -c /root/.screenrc`{{execute HOST1}}
-
-
 This command *should* decrypt "kubeconfig.txt.encrypted":
 `openssl enc -d -a -in kubeconfig.txt.encrypted -aes-256-cbc -pass file:config-secret-key > kubeconfig`{{execute HOST1}}
 
@@ -21,6 +9,11 @@ This command should set you up to use that kubeconfig for the rest of this demo:
 Test that this is working:
 `kubectl get all --all-namespaces`{{execute HOST1}}
 
+split your terminal screen into two panes:
+`screen -c /root/.screenrc`{{execute HOST1}}
+
+start kubectl proxy:
+`:focus topexport KUBECONFIG=/root/kubeconfig ; kubectl proxy --address 0.0.0.0 --port=8001 --accept-hosts='.*'`{{execute HOST1}}
 
 Render port 8001: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/links.html
 
@@ -50,5 +43,3 @@ set GNU-screen to disable mouse-tracking:
 set GNU-screen to enable mouse-tracking:
 `:mousetrack on`{{execute HOST1}}
 
-start kubectl proxy:
-`:focus topexport KUBECONFIG=/root/kubeconfig ; kubectl proxy --address 0.0.0.0 --port=8001 --accept-hosts='.*'`{{execute HOST1}}
