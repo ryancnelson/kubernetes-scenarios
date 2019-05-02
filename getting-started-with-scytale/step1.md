@@ -8,13 +8,13 @@ This command will run a webserver to serve up this file.
 `python -mSimpleHTTPServer 8001`{{execute HOST1}}
 
 This command *should* decrypt "kubeconfig.txt.encrypted":
-`openssl enc -d -a -in kubeconfig.txt.encrypted -aes-256-cbc -pass file:config-secret-key > kubeconfig`
+`openssl enc -d -a -in kubeconfig.txt.encrypted -aes-256-cbc -pass file:config-secret-key > kubeconfig`{{execute HOST1}}
 
 This command should set you up to use that kubeconfig for the rest of this demo:
-`export KUBECONFIG=/root/kubeconfig`
+`export KUBECONFIG=/root/kubeconfig`{{execute HOST1}}
 
 Test that this is working:
-`kubectl get all --all-namespaces`
+`kubectl get all --all-namespaces`{{execute HOST1}}
 
 
 Render port 8001: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/links.html
