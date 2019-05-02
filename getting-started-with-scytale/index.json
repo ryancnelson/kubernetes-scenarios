@@ -7,19 +7,19 @@
     "details": {
         "steps": [
             {
-                "title": "Step 1 - Initialise Master",
+                "title": "Step 1 - put your left foot in",
                 "text": "step1.md"
             },
             {
-                "title": "Step 2 - Join Cluster",
+                "title": "Step 2 - put your left foot OUT",
                 "text": "step2.md"
             },
             {
-                "title": "Step 3 - View Nodes",
+                "title": "Step 3 - put your left foot back IN",
                 "text": "step3.md"
             },
             {
-                "title": "Step 4 - Deploy Container Networking Interface (CNI)",
+                "title": "Step 4 - Shake it all about.",
                 "text": "step4.md"
             },
             {
