@@ -1,4 +1,5 @@
 #!/bin/bash
+set +x
 echo Waiting for initial setup ...
   while [ ! -f /usr/bin/screen ]
   do
