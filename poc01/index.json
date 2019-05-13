@@ -25,7 +25,7 @@
             "text": "finish.md"
         },
         "assets": {
-          "host01": [{"file": "links.html", "target": "/root"}, {"file": "kubeconfig.txt.encrypted", "target": "/root"}, {"file": ".screenrc", "target": "/root"}]
+          "host01": [{"file": "links.html", "target": "/root"}, {"file": "kubeconfig.txt.encrypted.b64", "target": "/root"}, {"file": ".screenrc", "target": "/root"}]
         }
     },
     "environment": {
