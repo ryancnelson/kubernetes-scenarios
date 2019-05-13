@@ -1,7 +1,7 @@
 ## Task
 
-This command *should* decrypt "kubeconfig.txt.encrypted":
-`openssl enc -d -a -in kubeconfig.txt.encrypted -aes-256-cbc -pass file:config-secret-key > kubeconfig`{{execute HOST1}}
+This command *should* decrypt "kubeconfig.txt.encrypted.b64" (ask ryan for the secret to decode it):
+`cat kubeconfig.txt.encrypted.b64  | openssl enc -d -aes256 -base64 > kubeconfig`{{execute HOST1}}
 
 This command should set you up to use that kubeconfig for the rest of this demo:
 `export KUBECONFIG=/root/kubeconfig`{{execute HOST1}}
