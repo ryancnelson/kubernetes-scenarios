@@ -1,0 +1,40 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "title": "Getting Started With Scytale",
+    "description": "Scytale Enterprise Kubernetes Workshop Example",
+    "difficulty": "intermediate",
+    "time": "10-15 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1 - put your left foot in",
+                "text": "step1.md"
+            },
+            {
+                "title": "Step 2 - put your left foot OUT",
+                "text": "step2.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "courseBase.sh",
+            "code": "setup.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+          "host01": [{"file": "links.html", "target": "/root"},{"file": "config-secret-key", "target": "/root"}, {"file": "kubeconfig.txt.encrypted", "target": "/root"}, {"file": ".screenrc", "target": "/root"}]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal-iframe",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n",
+        "showdashboard": true,
+        "dashboards": [{"name": "Display 8001", "port": 8001}]
+    },
+    "backend": {
+      "imageid": "kubernetes"
+    }
+}
