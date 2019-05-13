@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "Kubernetes",
-    "title": "Getting Started With Scytale",
-    "description": "Scytale Enterprise Kubernetes Workshop Example",
+    "title": "POC Env #1",
+    "description": "Example",
     "difficulty": "intermediate",
     "time": "10-15 minutes",
     "details": {
