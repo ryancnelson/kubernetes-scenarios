@@ -8,7 +8,6 @@ for any of these links, you can open them in their own window, by using the Kata
 
 
 * <a href="https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/default/services/webapp1:/proxy/tasks/"webapp 1, via proxy:</a>
-
 * <a href="https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/default/services/webapp2:/proxy/tasks/">webapp 2, via proxy: </a>
 
 ------
