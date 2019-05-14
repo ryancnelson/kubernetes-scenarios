@@ -14,9 +14,9 @@ Test that this is working:
 <br>
 `kubectl get all --all-namespaces`{{execute HOST1}}
 
-split your terminal screen into two panes:
+split your terminal screen into two panes, then start the kubectl proxy in the top:
 <br>
-`screen -c /root/.screenrc`{{execute HOST1}}
+`screen -c /root/.screenrc:focus topexport KUBECONFIG=/root/kubeconfig ; kubectl proxy --address 0.0.0.0 --port=8001 --accept-hosts='.*':focus bottom:mousetrack off`{{execute HOST1}}
 
 start kubectl proxy:
 <br>
