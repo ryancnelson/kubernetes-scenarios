@@ -20,7 +20,7 @@ split your terminal screen into two panes:
 
 start kubectl proxy:
 <br>
-`:focus topexport KUBECONFIG=/root/kubeconfig ; kubectl proxy --address 0.0.0.0 --port=8001 --accept-hosts='.*':focus bottom`{{execute HOST1}}
+`:focus topexport KUBECONFIG=/root/kubeconfig ; kubectl proxy --address 0.0.0.0 --port=8001 --accept-hosts='.*':focus bottom:mousetrack off`{{execute HOST1}}
 
 webapp 1, via proxy: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/default/services/webapp1:/proxy/tasks/
 
