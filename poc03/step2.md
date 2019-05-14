@@ -3,12 +3,14 @@
 for any of these links, you can open them in their own window, by using the Katacoda "open in new window/tab" icon:
 <br><img src="http://ryan.net/misc/pop-to-new-window-icon.png">
 
+------
+* <a href="https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/default/services/webapp1:/proxy/tasks/"webapp 1, via proxy:</a>
 
-webapp 1, via proxy: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/default/services/webapp1:/proxy/tasks/
+* <a href="https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/default/services/webapp2:/proxy/tasks/">webapp 2, via proxy: </a>
 
-webapp 2, via proxy: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/default/services/webapp2:/proxy/tasks/
+------
 
-* k8s-dashboard, via proxy: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview?namespace=default
+* <a href="https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview?namespace=default">k8s-dashboard, via proxy:</a>
 
 * Use this token to authenticate to the Kubernetes dashboard: 
 (click once in the text to copy the whole token)
@@ -17,9 +19,11 @@ webapp 2, via proxy: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environme
 If this token doesn't work for you, it may have been reset:  retrieve the current one by running `:focus bottom:mousetrack off./fetch-dash-token.sh`{{execute HOST1}}
 
 (tip:  make sure you don't copy/paste any spaces from the end of the line, or linefeeds. This is problematic in GNU screen on some platforms.  You may have luck removing line-feeds and spaces, using a text editor.)
-
-links: <a href="https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/default/services/ldap-lam:/proxy/"> ldap UI, via proxy: </a>
+-----
+* <a href="https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/default/services/ldap-lam:/proxy/"> ldap UI, via proxy: </a>
 use this password: `RWq7=bcV+Dr`{{copy}}
+------
+# helpful clickable links for this demo:
 
 set focus to the top pane of GNU-screen:
 `:focus top`{{execute HOST1}}
