@@ -25,7 +25,7 @@
             "text": "finish.md"
         },
         "assets": {
-          "host01": [{"file": "links.html", "target": "/root"}, {"file": "kubeconfig.txt.encrypted.b64", "target": "/root"}, {"file": ".screenrc", "target": "/root"} , {"file": "fetch-dash-token.sh"}]
+          "host01": [{"file": "links.html", "target": "/root"}, {"file": "kubeconfig.txt.encrypted.b64", "target": "/root"}, {"file": ".screenrc", "target": "/root"} , {"file": "fetch-dash-token.sh", "target": "/root"}]
         }
     },
     "environment": {

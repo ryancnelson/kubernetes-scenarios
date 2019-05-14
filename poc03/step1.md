@@ -1,6 +1,10 @@
 ## Task
 
-This command *should* decrypt "kubeconfig.txt.encrypted.b64" (ask ryan for the secret to decode it):
+This command *should* decrypt "kubeconfig.txt.encrypted.b64" 
+YOU WILL NEED A PASSWORD HERE:
+
+(ask ryan for the secret to decode it):
+
 `cat kubeconfig.txt.encrypted.b64  | openssl enc -d -aes256 -base64 > kubeconfig`{{execute HOST1}}
 
 This command should set you up to use that kubeconfig for the rest of this demo:
