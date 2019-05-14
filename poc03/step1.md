@@ -5,7 +5,7 @@ YOU WILL NEED A PASSWORD HERE:
 
 (ask ryan for the secret to decode it):
 
-`cat kubeconfig.txt.encrypted.b64  | openssl enc -d -aes256 -base64 > kubeconfig`{{execute HOST1}}
+`cat kubeconfig.txt.encrypted.b64  | openssl enc -d -aes256 -base64 > kubeconfig ; cat kubeconfig | grep client-certificate-data | sed -e 's/.*: //' | base64 -d | openssl x509 -text -noout  || echo "problems with kubeconfig. please try again." `{{execute HOST1}}
 
 This command should set you up to use that kubeconfig for the rest of this demo:
 `export KUBECONFIG=/root/kubeconfig`{{execute HOST1}}
