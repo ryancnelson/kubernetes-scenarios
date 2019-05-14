@@ -8,15 +8,19 @@ YOU WILL NEED A PASSWORD HERE:
 `cat kubeconfig.txt.encrypted.b64  | openssl enc -d -aes256 -base64 > kubeconfig ; cat kubeconfig | grep client-certificate-data | sed -e 's/.*: //' | base64 -d | openssl x509 -text -noout  || echo "problems with kubeconfig. please try again." `{{execute HOST1}}
 
 This command should set you up to use that kubeconfig for the rest of this demo:
+
 `export KUBECONFIG=/root/kubeconfig`{{execute HOST1}}
 
 Test that this is working:
+
 `kubectl get all --all-namespaces`{{execute HOST1}}
 
 split your terminal screen into two panes:
+
 `screen -c /root/.screenrc`{{execute HOST1}}
 
 start kubectl proxy:
+
 `:focus topexport KUBECONFIG=/root/kubeconfig ; kubectl proxy --address 0.0.0.0 --port=8001 --accept-hosts='.*'`{{execute HOST1}}
 
 webapp 1, via proxy: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/default/services/webapp1:/proxy/tasks/
