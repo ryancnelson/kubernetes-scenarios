@@ -18,9 +18,7 @@ split your terminal screen into two panes, then start the kubectl proxy in the t
 <br>
 `screen -c /root/.screenrc:focus topexport KUBECONFIG=/root/kubeconfig ; kubectl proxy --address 0.0.0.0 --port=8001 --accept-hosts='.*':focus bottom:mousetrack off`{{execute HOST1}}
 
-start kubectl proxy:
-<br>
-`:focus topexport KUBECONFIG=/root/kubeconfig ; kubectl proxy --address 0.0.0.0 --port=8001 --accept-hosts='.*':focus bottom:mousetrack off`{{execute HOST1}}
+-----
 
 # helpful clickable shortcuts for this demo:
 set focus to the top pane of GNU-screen:
