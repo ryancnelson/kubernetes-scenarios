@@ -6,3 +6,6 @@ What's my current hostname?
 What's my other hostname?
 `hostname`{{execute HOST2}}
 
+what's the current date?
+`date`{{execute HOST1}}
+
