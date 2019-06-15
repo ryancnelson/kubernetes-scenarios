@@ -6,5 +6,9 @@ echo Waiting for initial setup ...
   done
 chmod 777 /var/run/screen
 
+git clone https://github.com/ryancnelson/spiffe-example
+cd spiffe-example/dupin
+make
+
 echo 'environment setup.  Have fun! '
 
