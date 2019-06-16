@@ -15,6 +15,12 @@ now, let's put that token into an environment variable: (this is just to make ou
 :focus right
 mytoken=$(cat mytoken.txt | sed -e 's/Token: //) ; echo token is: $mytoken `{{execute HOST1}}
 
+if that says something like "token is: 5AF67201-DE85-4FF5-A7BF-31E576CA95F1", then we're doing great.
+
+Let's start the agent with that token:
+`:focus top
+:focus right
+./spire-agent run -joinToken $mytoken `{{execute HOST1}}
 -----
 
 
