@@ -1,6 +1,12 @@
 ## Task
 
+Welcome!   Please wait for the workshop environment here to set itself up before continuing!
+
+----
+
+
 *Start the Demo, running in GNU-Screen*
+(clicking the gray box here, that says "make demo", will execute that command in the terminal.  Or, you can type "make demo" yourself.)
 `make demo`{{execute HOST1}}
 
 What's my current hostname?
