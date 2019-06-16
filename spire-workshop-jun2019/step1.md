@@ -25,9 +25,6 @@ focus pane 5:
 `:focus bottom:focus right`{{execute HOST1}}
 
 
-What's my other hostname?
-`hostname`{{execute HOST2}}
-
 what's the current date?
 `date`{{execute HOST1}}
 

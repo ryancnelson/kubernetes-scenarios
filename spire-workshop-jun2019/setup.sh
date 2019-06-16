@@ -12,5 +12,6 @@ make
 
 export SPIRE_GOOPTS=""
 export DEBUG=""
+chmod 777 /var/run/screen
 echo 'environment setup.  Have fun! '
 
