@@ -1,6 +1,7 @@
 ## Task
 
 Welcome!   Please wait for the workshop environment here to set itself up before continuing!
+When it's ready, you'll see "environment setup.  Have fun!"
 
 ----
 
