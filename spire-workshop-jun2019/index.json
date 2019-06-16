@@ -25,7 +25,7 @@
       "text": "finish.md"
     },
    "assets": {
-          "host01": [{"file": "test.txt", "target": "/root"}, {"file": ".bashrc", "target": "/root"}, {"file": "dupin_spiffe-nginx.tar", "target": "/root"}]
+          "host01": [{"file": "test.txt", "target": "/root"}, {"file": ".bashrc", "target": "/root"}]
         }
   },
   "environment": {
