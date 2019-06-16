@@ -9,6 +9,7 @@ start up the spire server in pane 0:
 
 
 ... you should see spire-server logs in the upper-left terminal pane.
+
 ----
 
 next:  let's see what workloads are registered, in the upper-right pane:
@@ -16,13 +17,18 @@ next:  let's see what workloads are registered, in the upper-right pane:
 :focus right
 ./spire-server entry show`{{execute HOST1}}
 
-... oh:  you probably got "no entries".  That's expected!
+... oh:  you probably got "0 entries". That's expected!
+
 Let's create some!
 
 `:focus top
 :focus right
 ./spire-server entry create -parentID spiffe://example.org/host -spiffeID spiffe://example.org/host/front-end -selector unix:uid:0 -ttl 60`{{execute HOST1}}
 
+
+`:focus top
+:focus right
+./spire-server entry create -parentID spiffe://example.org/host -spiffeID spiffe://example.org/host/blog -selector unix:uid:1000 -ttl 60`{{execute HOST1}}
 
 ------
 
