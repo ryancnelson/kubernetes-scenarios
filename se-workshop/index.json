@@ -54,6 +54,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "swarm"
+    "imageid": "docker"
   }
 }
