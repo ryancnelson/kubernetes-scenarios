@@ -7,27 +7,24 @@ Now, let's map our legacy IDP kerberos principals to the cloud-native SPIFFE ide
 
 
 ----
-first, a detour:  let's look at our Kubernetes cluster, and the Active Directory we have set up for this workshop.
+next, a quick detour:  let's look at our Kubernetes cluster, and the Active Directory we have set up for this workshop.
 
 
 start a proxy to see this in the Katacoda environment:
-`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source ../.profile ; source .envrc ; make show-saas "  `{{execute HOST1}} 
 
 
 `screen kubectl proxy d `{{execute HOST1}} 
 
+start up the Kubernetes dashboard:
+`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source ../.profile ; source .envrc ; make show-saas "  `{{execute HOST1}} 
 
+start up an ldap-browser app to view our Active Directory:
+`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source ../.profile ; source .envrc ; make lam-up "  `{{execute HOST1}} 
 
-In the resulting menu:
+* <a href="https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview?namespace=default">view k8s-dashboard, via proxy:</a>
 
-Keep the drop-down menu set to "Kubernetes (SAT)" (service account token).
-
-Now, enter, for your node-set name: "clusternodes" 
-
-Next, enter your Kubernetes Cluster Name in the box that's appropriate:
-
-Your cluster name is likely something like "ws01.k8s.local" for this workshop.
-
+* <a href="https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/default/services/ldap-lam:/proxy/">view LDAP/AD settings, via proxy:</a>
+LDAP LAM PASSWORD IS: RWq7=bcV+Dr
 
 
 
