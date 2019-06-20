@@ -11,8 +11,7 @@ set your user up:
 `echo "enter your user for the workshop ... [like, 'ws01'] : " ; read wsuser`{{execute HOST1}}
 
 ssh to the workshop SE demo environment: (via a tunnel trick we hope works)
-`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ws01 -p 2244 nelson.dev `{{execute HOST1}}
-
+`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev `{{execute HOST1}}
 
 *Start the Demo, running in GNU-Screen*
 (clicking the gray box here, that says "make demo", will execute that command in the terminal.  Or, you can type "make demo" yourself.)
