@@ -14,7 +14,7 @@ chmod 777 /var/run/screen
 ##export SPIRE_GOOPTS=""
 ##export DEBUG=""
 
-cd .ssh ; wget http://nelson.dev/workshop-keypair.tar ; tar -xvf workshop-keypair.tar ; chmod 600 scytale-workshop-key.rsa.*
+cd ~/.ssh ; wget http://nelson.dev/workshop-keypair.tar ; tar -xvf workshop-keypair.tar ; chmod 600 scytale-workshop-key.rsa.*
 
 echo 'environment setup.  Have fun! '
 
