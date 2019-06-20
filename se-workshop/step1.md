@@ -18,7 +18,10 @@ pull in the kubernetes config file to the katacoda environment:
 
 now, we should be able to see some pods:
 (if so, then it's working)
-`kubectl get pods --all-namespaces`
+`kubectl get pods --all-namespaces`{{execute HOST1}}
+
+`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source .envrc ; make show-saas `{{execute HOST1}}
+
 
 
 
