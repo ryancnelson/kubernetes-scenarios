@@ -8,7 +8,7 @@ When it's ready, you'll see "environment setup.  Have fun!"
 
 set your user up:
 
-`echo "enter your user for the workshop ... [like, 'ws01'] : " ; read wsuser`{{execute HOST1}}
+`/bin/echo -n "enter your user for the workshop ... [like, 'ws01'] : " ; read wsuser`{{execute HOST1}}
 
 ssh to the workshop SE demo environment: (via a tunnel trick we hope works)
 `ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev hostname `{{execute HOST1}}
