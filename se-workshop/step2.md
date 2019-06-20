@@ -8,7 +8,11 @@ fetch the trust bundle for your kubernetes cluster, so we can let the Scytale Co
 *copy the `---CERTIFICATE STUFF---` above * 
 ... then go to http://console.demo.scytale.io/ , and ask the instructors for your login credentials.
 
+*IF* this doesn't work for you, you may need to start, (or re-start) the scytale server and agent pods, to get a current trust-bundle.  Ask your instructor why :)
+`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source ../.profile ; source .envrc ; make scytale-down ; sleep 1 ; make scytale-up ;  "   `{{execute HOST1}}
 
+(after running this, if necessary, wait about a minute, then try the following again):
+`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source ../.profile ; source .envrc ; make show-saas "   `{{execute HOST1}}
 
 
 
