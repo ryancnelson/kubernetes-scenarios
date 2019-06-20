@@ -4,7 +4,7 @@ fetch the trust bundle from the Scytale-server running in your kubernetes cluste
 kubectl exec --namespace=scytale $server_pod -- /opt/scytale/bin/scytale-server bundle show -manageUDSPath /run/scytale/server_manage.sock
 echo "" `{{execute HOST1}}
 
-`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source ../.profile ; source .envrc ; make show-saas "  | less  `{{execute HOST1}}
+`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source ../.profile ; source .envrc ; make show-saas "  `{{execute HOST1}}
 
 *copy the `---CERTIFICATE STUFF---` above * 
 ... then go to http://console.demo.scytale.io/v2 , and ask the instructors for your login credentials.
