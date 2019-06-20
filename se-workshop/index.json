@@ -1,6 +1,8 @@
 {
   "title": "Scytale Enterprise workshop + Kubernetes demo",
   "description": "",
+  "difficulty": "tricky",
+  "time": "45 minutes",
   "details": {
     "steps": [
       {

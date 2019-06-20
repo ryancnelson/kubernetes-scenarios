@@ -1,6 +1,6 @@
 In the Stycale UI console, you should see something like:
 
-<img style="width:40%; height:auto;"src="http://nelson.dev/manage_identities.jpg" > 
+<img style="width:40%; height:auto;"src="http://nelson.dev/manage_identites.jpg" > 
 
 Now, let's map our legacy IDP kerberos principals to the cloud-native SPIFFE identities we've just defined. 
 
