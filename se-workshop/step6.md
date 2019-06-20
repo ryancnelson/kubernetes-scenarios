@@ -13,7 +13,7 @@ next, a quick detour:  let's look at our Kubernetes cluster, and the Active Dire
 start a proxy to see this in the Katacoda environment:
 
 
-`screen kubectl proxy decho "what just happened was, we started a proxy in a GNU-screen window, then detached.  This message is normal." `{{execute HOST1}} 
+`screen kubectl proxy --address 0.0.0.0 --port=8001 --accept-hosts='.*'  d; echo "what just happened was, we started a proxy in a GNU-screen window, then detached.  This message is normal." `{{execute HOST1}} 
 
 start up the Kubernetes dashboard:
 `ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source ../.profile ; source .envrc ; make dash-up "  `{{execute HOST1}} 
