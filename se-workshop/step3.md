@@ -16,6 +16,7 @@ Enter a descriptive name, and submit.
 Wait a minute, and reload, and you should see your simulated "on prem" Active Directory server be disovered in the console.
 
 It should look like this:
+
 <img style="width:40%; height:auto;"src="http://nelson.dev/id_provider_discovered.jpg" >
 
 

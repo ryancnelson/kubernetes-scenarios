@@ -1,60 +1,39 @@
-## Task
+Now, let's create a node-set:
 
-SPIRE Server and SPIRE Agent are now running and ready to attest our workloads and generate the corresponding SVIDs. The environment is already provisioned with sample configuration files for the NGINX front-end and the NGINX blog servers. The nginx-blog terminal can be used to launch the NGINX acting as a blog:
+In the console, click the create-node-set button:
 
-Let's start the "blog" webserver in the middle-left pane:
-
-focus pane 2:
-`:focus top
-:focus down
-:focus left
-./nginx -c /usr/local/nginx/nginx_blog.conf`{{execute HOST1}}
+<img style="width:40%; height:auto;"src="http://nelson.dev/node-set-create.jpg" > button, and paste in your trust-bundle.
 
 
-...and then start the front-end proxy in the middle-right pane:
+(after running this, if necessary, wait about a minute, then try the following again):
+`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source ../.profile ; source .envrc ; make show-saas "   `{{execute HOST1}}
 
-focus pane 3:
-`:focus top
-:focus down
-:focus right
-./nginx -c /usr/local/nginx/nginx_fe.conf`{{execute HOST1}}
+NOW: 
+*copy the `---CERTIFICATE STUFF---` above * 
+... then go to http://console.demo.scytale.io/v2 , and ask the instructors for your login credentials.
 
 
 
------
+
+So, now you should have some:
+`---CERTIFICATE STUFF---` ready to copy and paste.
+
+That's your "trust bundle".
 
 
-focus pane 0:
-`:focus top
-:focus left
-`{{execute HOST1}}
+NOW: 
+*copy the `---CERTIFICATE STUFF---` above * 
+... then go to http://console.demo.scytale.io/v2 , and ask the instructors for your login credentials.
 
-focus pane 1:
-`:focus top
-:focus right
-`{{execute HOST1}}
+once you're logged in, click the <img style="width:40%; height:auto;"src="http://nelson.dev/authenticate-button.jpg" > button, and paste in your trust-bundle.
 
-focus pane 2:
-`:focus top
-:focus down
-:focus left
-`{{execute HOST1}}
+Enter a descriptive name, and submit.
 
-focus pane 3:
-`:focus top
-:focus down
-:focus right
-`{{execute HOST1}}
+Wait a minute, and reload, and you should see your simulated "on prem" Active Directory server be disovered in the console.
 
-focus pane 4:
-`:focus bottom
-:focus left
-`{{execute HOST1}}
+It should look like this:
 
-focus pane 5:
-`:focus bottom
-:focus right
-`{{execute HOST1}}
+<img style="width:40%; height:auto;"src="http://nelson.dev/id_provider_discovered.jpg" >
 
 
 
