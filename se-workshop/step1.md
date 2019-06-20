@@ -20,7 +20,9 @@ now, we should be able to see some pods:
 (if so, then it's working)
 `kubectl get pods --all-namespaces`{{execute HOST1}}
 
-`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source .envrc ; make show-saas `{{execute HOST1}}
+
+show-saas
+`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source ../.profile ; source .envrc ; make show-saas "  `{{execute HOST1}}
 
 
 
