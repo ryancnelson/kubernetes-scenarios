@@ -13,10 +13,10 @@ next, a quick detour:  let's look at our Kubernetes cluster, and the Active Dire
 start a proxy to see this in the Katacoda environment:
 
 
-`screen kubectl proxy d `{{execute HOST1}} 
+`screen kubectl proxy decho "what just happened was, we started a proxy in a GNU-screen window, then detached.  This message is normal." `{{execute HOST1}} 
 
 start up the Kubernetes dashboard:
-`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source ../.profile ; source .envrc ; make show-saas "  `{{execute HOST1}} 
+`ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source ../.profile ; source .envrc ; make dash-up "  `{{execute HOST1}} 
 
 start up an ldap-browser app to view our Active Directory:
 `ssh  -i ~/.ssh/scytale-workshop-key.rsa -l ${wsuser}  -p 2244 nelson.dev "cd sales-poc ; source ../.profile ; source .envrc ; make lam-up "  `{{execute HOST1}} 
@@ -27,5 +27,8 @@ start up an ldap-browser app to view our Active Directory:
 LDAP LAM PASSWORD IS: RWq7=bcV+Dr
 
 
+https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/
 
+
+https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/api/v1/namespaces/default/services/ldap-lam:/proxy/
 
