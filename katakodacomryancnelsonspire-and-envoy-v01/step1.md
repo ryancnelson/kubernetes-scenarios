@@ -1,6 +1,6 @@
 
 pull the github repo for this exercise:
-`git clone https://github.com/spiffe/spire.git`{{execute HOST1}}
+`apt-get update ; apt-get install -y golang ; git clone https://github.com/spiffe/spire.git`{{execute HOST1}}
 
 build the environment and containers:
 `cd spire/examples/envoy ; ./build.sh`{{execute HOST1}}
