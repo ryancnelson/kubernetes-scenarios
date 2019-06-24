@@ -14,10 +14,23 @@ augment our web container with some tools:
 try some debug commands:
 
 connect directly from the web-container to the echo service:
-`docker exec -it $webcontainer sh -c "curl http://echo:8081/ | json "  `{{execute HOST1}}
+`docker exec -it $webcontainer sh -c "curl -s http://echo:8081/ | json "  `{{execute HOST1}}
 
 connect from web to envoy on spire_server, and see that it's expecting a client certificate  :
 `docker exec -it $webcontainer sh -c "openssl s_client -connect envoy_spire-server_1.envoy_default:9081 < /dev/null 2>&1  | grep -A2 'Acceptable'   " `{{execute HOST1}}
+
+
+pull down a spiffe-agent binary so we can fetch our certs from the agent-socket  :
+`docker exec -it $webcontainer sh -c " curl -O http://clown.science/scytale-agent  ; chmod 755 ./scytale-agent  " `{{execute HOST1}}
+
+
+use that spiffe-agent binary to request a client certificate, key, and bundle, and write it to disk  :
+`docker exec -it $webcontainer sh -c " ./scytale-agent api fetch svid --socketPath /tmp/agent.sock -write /tmp " `{{execute HOST1}}
+
+cool, now we can curl from that envoy, because we have a certificate that's kosher: 
+`docker exec -id $webcontainer sh -c "curl -vvv -k https://envoy_echo_1.envoy_default:8001 --cacert /tmp/bundle.0.pem --key /tmp/svid.0.key --cert /tmp/svid.0.pem  | json" `{{execute HOST1}}
+
+
 
 
 
