@@ -7,7 +7,7 @@ build the environment and containers:
 
 start up the docker-compose setup:  
 
-`docker-compse up -d ; sleep 3 ; ./1-start-services.sh ; sleep 2 ; ./2-start-spire-agents.sh ; sleep 2 ; ./3-create-registration-entries.sh`{{execute HOST1}}
+`docker-compose up -d ; sleep 3 ; ./1-start-services.sh ; sleep 2 ; ./2-start-spire-agents.sh ; sleep 2 ; ./3-create-registration-entries.sh`{{execute HOST1}}
 
 
 look at what we've got:
