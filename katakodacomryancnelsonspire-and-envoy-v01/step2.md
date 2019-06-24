@@ -34,6 +34,6 @@ cool, now we can curl from that envoy, because we have a certificate that's kosh
 `docker exec -it $webcontainer sh -c "curl -vvv -k https://envoy_echo_1.envoy_default:8001/ --cacert /tmp/bundle.0.pem --key /tmp/svid.0.key --cert /tmp/svid.0.pem  | json" `{{execute HOST1}}
 
 
-
+https://cdn-images-1.medium.com/max/800/0*QWV06vCtJu0KuuOA
 
 
