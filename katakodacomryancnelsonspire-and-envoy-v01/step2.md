@@ -34,6 +34,13 @@ cool, now we can curl from that envoy, because we have a certificate that's kosh
 `docker exec -it $webcontainer sh -c "curl -vvv -k https://envoy_echo_1.envoy_default:8001/ --cacert /tmp/bundle.0.pem --key /tmp/svid.0.key --cert /tmp/svid.0.pem  | json" `{{execute HOST1}}
 
 
+Note that we're not (yet) validating the certificate that envoy sends, because curl only validates the *hostname*.  So, we use '-k' to ignore that complaint.
+
+Let's manually check that what's in the SAN field URI is the spiffe:// ID we're expecting, using the openssl command:
+
+`docker exec -it $webcontainer sh -c "openssl s_client -connect envoy_spire-server_1.envoy_default:9081 < /dev/null 2>&1   | openssl x509 -text | egrep 'Subject Alternative|URI' " `{{execute HOST1}}
+
+
 <img src="https://cdn-images-1.medium.com/max/800/0*QWV06vCtJu0KuuOA">
 
 
