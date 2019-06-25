@@ -4,7 +4,7 @@ inventory our docker containers:
 
 `echocontainer=$( docker ps | grep envoy_echo | awk '{print $1}') `{{execute HOST1}}
 
-`spirecontainer=$(docker ps | grep envoy_spire_server | awk '{print $1}') `{{execute HOST1}}
+`spirecontainer=$(docker ps | grep envoy_spire-server | awk '{print $1}') `{{execute HOST1}}
 
 
 augment our web container with some tools:
