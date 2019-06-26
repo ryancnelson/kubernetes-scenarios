@@ -9,7 +9,6 @@ git clone https://github.com/spiffe/spire.git
 echo "build the environment and containers:"
 cd spire/examples/envoy ; ./build.sh
 echo "start up the docker-compose setup:  "
-echo "All set!"
-docker-compose up -d ;sleep 3;  ./1-start-services.sh ;sleep 2 ; ./2-start-spire-agents.sh ; sleep 2 ; ./3-create-registration-entries.sh || echo "problem?"
+docker-compose up -d ;sleep 3;  ./1-start-services.sh ;sleep 2 ; ./2-start-spire-agents.sh ; sleep 2 ; ./3-create-registration-entries.sh && echo "env set up."
 echo "All set!"
 
