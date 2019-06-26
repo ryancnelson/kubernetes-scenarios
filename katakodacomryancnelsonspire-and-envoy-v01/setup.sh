@@ -11,13 +11,7 @@ cd spire/examples/envoy ; ./build.sh
 
 echo "start up the docker-compose setup:  "
 
-docker-compose up -d 
-sleep 3
-./1-start-services.sh 
-sleep 2 
-./2-start-spire-agents.sh 
-sleep 2
-./3-create-registration-entries.sh
+docker-compose up -d ;sleep 3;  ./1-start-services.sh ;sleep 2 ; ./2-start-spire-agents.sh ; sleep 2 ; ./3-create-registration-entries.sh
 
 
 echo "All set!"
