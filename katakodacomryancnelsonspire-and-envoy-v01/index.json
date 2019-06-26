@@ -27,6 +27,9 @@
   "environment": {
     "uilayout": "terminal"
   },
+  "assets": {
+          "host01": [{"file": "setup_environment.sh", "target": "/root"} ]
+        },
   "backend": {
     "imageid": "docker"
   }
