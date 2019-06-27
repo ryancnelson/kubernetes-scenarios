@@ -30,7 +30,10 @@ exec down into the spire-server container and look at the server entries:
 
 *now remove the entry that attests the webserver*
 `webcontainer-shell # /opt/spire/bin/spire-server entry delete -entryID XXXXXX`
+
 `exit`
+
+
 -----
 
 now let's see if the webserver can still fetch an SVID like it used to:
