@@ -24,7 +24,7 @@
       "text": "finish.md"
     },
     "assets": {
-          "client": [{"file": "setup_environment.sh", "target": "/root"} ]
+          "HOST1": [{"file": "setup_environment.sh", "target": "/root"} ]
         }
   },
   "environment": {
