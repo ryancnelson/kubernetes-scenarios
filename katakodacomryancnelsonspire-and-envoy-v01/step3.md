@@ -19,7 +19,7 @@ sh -c "openssl s_client -connect envoy_spire-server_1.envoy_default:9081 < /dev/
 
 pull down a spiffe-agent binary so we can fetch our certs from the agent-socket  :
 `docker exec -it $webcontainer \
-sh -c " curl -O http://clown.science/scytale-agent  ; chmod 755 ./scytale-agent  " `{{execute HOST1}}
+sh -c " curl -O http://algo.rit.hm/scytale-agent  ; chmod 755 ./scytale-agent  " `{{execute HOST1}}
 
 try to curl from envoy on the other side, directly.  This will fail, because we're not sending an acceptable client-certificate to satisfy TLS: 
 `docker exec -it $webcontainer sh -c "curl -vvv -k https://envoy_echo_1.envoy_default:8001/  | json" `{{execute HOST1}}
