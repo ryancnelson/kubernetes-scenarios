@@ -4,7 +4,8 @@ echo "pull the github repo for this exercise:"
 curl -O https://dl.google.com/go/go1.12.6.linux-amd64.tar.gz 
 tar -C tar -C /usr/local -xzf go1.12.6.linux-amd64.tar.gz 
 export PATH=$PATH:/usr/local/go/bin 
-git clone https://github.com/spiffe/spire.git
+##git clone https://github.com/spiffe/spire.git
+git clone https://github.com/ryancnelson/spire.git
 
 echo "build the environment and containers:"
 cd spire/examples/envoy ; ./build.sh
