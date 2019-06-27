@@ -19,3 +19,5 @@ start up the docker-compose setup:
 look at what we've got:
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
+diagram:  `curl http://algo.rit.hm/diag.txt`{{execute HOST1}}
+
