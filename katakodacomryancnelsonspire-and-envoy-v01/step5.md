@@ -25,11 +25,11 @@ exec down into the spire-server container and look at the server entries:
 
 `docker exec -it $spirecontainer sh`
 
-`webcontainer-shell # /opt/spire/bin/spire-server entry show`
+`spirecontainer-shell # /opt/spire/bin/spire-server entry show`
 
 
 *now remove the entry that attests the webserver*
-`webcontainer-shell # /opt/spire/bin/spire-server entry delete -entryID XXXXXX`
+`spirecontainer-shell # /opt/spire/bin/spire-server entry delete -entryID XXXXXX`
 
 `exit`
 
