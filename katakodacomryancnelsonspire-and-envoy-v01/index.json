@@ -22,14 +22,14 @@
     },
     "finish": {
       "text": "finish.md"
-    }
+    },
+    "assets": {
+          "host01": [{"file": "setup_environment.sh", "target": "/root"} ]
+        }
   },
   "environment": {
     "uilayout": "terminal"
   },
-  "assets": {
-          "host01": [{"file": "setup_environment.sh", "target": "/root"} ]
-        },
   "backend": {
     "imageid": "docker"
   }
