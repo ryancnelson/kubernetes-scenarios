@@ -17,6 +17,41 @@ then we get an SVID for "spiffe://domain.test/web-server"
 ... we get an SVID for "spiffe://domain.test/echo-server"
 
 
+-----
+
+Now, let's break the demo: (on purpose)
+
+exec down into the spire-server container and look at the server entries:
+
+`docker exec -it $webcontainer sh`
+
+`webcontainer-shell # /opt/spire/bin/spire-server entry show`
+
+
+*now remove the entry that attests the webserver*
+`webcontainer-shell # /opt/spire/bin/spire-server entry delete -entryID XXXXXX`
+`exit`
+-----
+
+now let's see if the webserver can still fetch an SVID like it used to:
+`docker exec -it $webcontainer sh -c "/opt/spire/bin/spire-agent api fetch"`{{execute HOST1}}
+
+...nope!
+
+the echo server is still fine, though.
+
+----
+
+See how the web interface is doing:
+
+----
+
+re-create that entry:
+
+`docker exec -it $webcontainer sh`
+
+/opt/spire/bin/spire-server entry create --parentID spiffe://domain.test/spire/agent/x509pop/2963802ba4938e8a1018
+0b7782d29c58e7282423 --spiffeID spiffe://domain.test/web-server -selector unix:user:root -ttl 60
 
 
 
