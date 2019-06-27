@@ -23,7 +23,7 @@ Now, let's break the demo: (on purpose)
 
 exec down into the spire-server container and look at the server entries:
 
-`docker exec -it $webcontainer sh`
+`docker exec -it $spirecontainer sh`
 
 `webcontainer-shell # /opt/spire/bin/spire-server entry show`
 
@@ -48,10 +48,9 @@ See how the web interface is doing:
 
 re-create that entry:
 
-`docker exec -it $webcontainer sh`
+`docker exec -it $spirecontainer sh`
 
-/opt/spire/bin/spire-server entry create --parentID spiffe://domain.test/spire/agent/x509pop/2963802ba4938e8a1018
-0b7782d29c58e7282423 --spiffeID spiffe://domain.test/web-server -selector unix:user:root -ttl 60
+`/opt/spire/bin/spire-server entry create --parentID spiffe://domain.test/spire/agent/x509pop/2963802ba4938e8a10180b7782d29c58e7282423 --spiffeID spiffe://domain.test/web-server --selector unix:user:root -ttl 60`
 
 
 
