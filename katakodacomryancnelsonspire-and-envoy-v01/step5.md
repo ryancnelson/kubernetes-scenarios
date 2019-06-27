@@ -1,7 +1,7 @@
 
 exec into the spire-container and look at the server entries we have set up:
 
-`docker exec -it $spirecontainer sh -c "/opt/spire/bin/spire-server entry show" `{{exec HOST1}}
+`docker exec -it $spirecontainer sh -c "/opt/spire/bin/spire-server entry show" `{{execute HOST1}}
 
 ----
 
