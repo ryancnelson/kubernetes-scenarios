@@ -15,7 +15,7 @@ Note that we're not (yet) validating the certificate that envoy sends, because c
 
 Let's manually check that what's in the SAN field URI is the spiffe:// ID we're expecting, using the openssl command:
 
-`docker exec -it $webcontainer sh -c "openssl s_client -connect echo:8001 -CAfile /tmp/bundle.0.pem `{{execute HOST1}}` 
+`docker exec -it $webcontainer sh -c "openssl s_client -connect echo:8001 -CAfile /tmp/bundle.0.pem" `{{execute HOST1}}` 
 
 see the "Verification" line?  It's signed by Spire.
 
