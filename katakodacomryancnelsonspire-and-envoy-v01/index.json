@@ -2,6 +2,7 @@
   "title": "spire and envoy v01",
   "description": "spire and envoy v01",
   "time": "30 minutes",
+  "private": true,
   "details": {
     "steps": [
       {
