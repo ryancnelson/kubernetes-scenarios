@@ -3,6 +3,7 @@
     "title": "POC Env #3",
     "description": "poc handoff",
     "difficulty": "n/a",
+    "private": true,
     "time": "n/a",
     "details": {
         "steps": [

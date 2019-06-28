@@ -1,6 +1,7 @@
 {
   "title": "SPIFFE/SPIRE + NGINX",
   "description": "example of using Spire and NGINX for MTLS with SPIFFE x509 certificates",
+  "private": true,
   "details": {
     "steps": [
       {
