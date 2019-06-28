@@ -1,6 +1,7 @@
 {
     "pathwayTitle": "Kubernetes",
     "title": "POC Env #1",
+    "private": true,
     "description": "Example",
     "difficulty": "intermediate",
     "time": "10-15 minutes",

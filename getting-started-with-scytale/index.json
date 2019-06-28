@@ -1,6 +1,7 @@
 {
     "pathwayTitle": "Kubernetes",
     "title": "Getting Started With Scytale",
+    "private": true,
     "description": "Scytale Enterprise Kubernetes Workshop Example",
     "difficulty": "intermediate",
     "time": "10-15 minutes",
