@@ -9,6 +9,10 @@ use the spire-agent to fetch a proper client certificate, and write that to disk
 
 Note that we're not (yet) validating the certificate that envoy sends, because curl only validates the *hostname*.  So, we use '-k' to ignore that complaint.
 
+----
+
+look at the client-certificate we're using, note the short date TTL.
+`docker exec -it $webcontainer sh -c "openssl x509 -in /tmp/svid.0.pem -text -noout -dates " `{{execute HOST1}}
 
 ----
 
