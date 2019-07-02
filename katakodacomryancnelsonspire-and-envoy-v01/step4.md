@@ -17,14 +17,14 @@ look at the client-certificate we're using, note the short date TTL.
 ----
 
 
-Let's manually check that what's in the SAN field URI is the spiffe:// ID we're expecting, using the openssl command:
+Let's manually check that the certificate is trusted by our trust-bundle, using the openssl command:
 
 `docker exec -it $webcontainer sh -c "openssl s_client -connect echo:8001 -CAfile /tmp/bundle.0.pem" `{{execute HOST1}}` 
 
-see the "Verification" line?  It's signed by Spire.
+see the "Verification" line?  It's signed by our Spire server.
 
-Now let's look inside the certificate, and see that it's got the spiffe:// ID we expect:
 
+Let's manually check that what's in the SAN field URI is the spiffe:// ID we're expecting, using the openssl command:
 `docker exec -it $webcontainer sh -c "openssl s_client -connect echo:8001 -CAfile /tmp/bundle.0.pem 2>&1  | openssl x509 -text | egrep 'Subject Alternative|URI' " `{{execute HOST1}}
 
 
