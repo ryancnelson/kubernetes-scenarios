@@ -2,7 +2,7 @@
   "title": "spire and envoy v01b with ubuntu image",
   "description": "spire and envoy v01b with ubuntu",
   "time": "30 minutes",
-  "private": true,
+  "private": false,
   "details": {
     "steps": [
       {
